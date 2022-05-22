@@ -1,5 +1,6 @@
 ### https://raw.github.com/github/gitignore/b0012e4930d0a8c350254a3caeedf7441ea286a3/Global/Xcode.gitignore
 
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -122,3 +123,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 
+Secret.swift

@@ -9,6 +9,9 @@ public protocol LocationManager {
     var error: AnyPublisher<Error, Never> { get }
 
     func request()
+
+    func registerMonitoring(place: MonitorPlace)
+    func resignMonitoring(place: MonitorPlace)
 }
 
 public class LocationManagerImpl: NSObject, CLLocationManagerDelegate, LocationManager {
@@ -47,6 +50,35 @@ public class LocationManagerImpl: NSObject, CLLocationManagerDelegate, LocationM
         manager.requestAlwaysAuthorization()
     }
 
+    public func registerMonitoring(place: MonitorPlace) {
+        if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+            let region = CLCircularRegion(
+                center: CLLocationCoordinate2D(
+                    latitude: place.latitude,
+                    longitude: place.longitude
+                ),
+                radius: 15,
+                identifier: String(describing: place.id)
+            )
+            manager.startMonitoring(for: region)
+        }
+    }
+
+    public func resignMonitoring(place: MonitorPlace) {
+        let region = CLCircularRegion(
+            center: CLLocationCoordinate2D(
+                latitude: place.latitude,
+                longitude: place.longitude
+            ),
+            radius: 15,
+            identifier: String(describing: place.id)
+        )
+        manager.stopMonitoring(for: region)
+    }
+
+}
+
+extension LocationManagerImpl {
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         errorRelay.send(error)
     }
