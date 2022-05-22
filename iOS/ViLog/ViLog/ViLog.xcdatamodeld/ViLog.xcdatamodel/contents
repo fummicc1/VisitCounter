@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MonitorPlace" representedClassName="MonitorPlace" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+    </entity>
+    <entity name="VisitSnapshot" representedClassName="VisitSnapshot" syncable="YES">
+        <attribute name="visitedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="monitorPlace" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MonitorPlace"/>
+    </entity>
+    <elements>
+        <element name="MonitorPlace" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="VisitSnapshot" positionX="-54" positionY="18" width="128" height="59"/>
+    </elements>
+</model>

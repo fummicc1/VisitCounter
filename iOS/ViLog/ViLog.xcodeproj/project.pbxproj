@@ -1,0 +1,914 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3A9A38D283A5C1B006F3CE6 /* ViLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A38C283A5C1B006F3CE6 /* ViLogApp.swift */; };
+		D3A9A391283A5C1D006F3CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A9A390283A5C1D006F3CE6 /* Assets.xcassets */; };
+		D3A9A394283A5C1D006F3CE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A9A393283A5C1D006F3CE6 /* Preview Assets.xcassets */; };
+		D3A9A396283A5C1D006F3CE6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A395283A5C1D006F3CE6 /* Persistence.swift */; };
+		D3A9A399283A5C1D006F3CE6 /* ViLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A397283A5C1D006F3CE6 /* ViLog.xcdatamodeld */; };
+		D3A9A3A3283A5C1D006F3CE6 /* ViLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3A2283A5C1D006F3CE6 /* ViLogTests.swift */; };
+		D3A9A3AD283A5C1D006F3CE6 /* ViLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3AC283A5C1D006F3CE6 /* ViLogUITests.swift */; };
+		D3A9A3AF283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3AE283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift */; };
+		D3A9A3C2283A65BE006F3CE6 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3C1283A65BE006F3CE6 /* ShareViewController.swift */; };
+		D3A9A3C5283A65BE006F3CE6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A9A3C3283A65BE006F3CE6 /* MainInterface.storyboard */; };
+		D3A9A3C9283A65BE006F3CE6 /* D_SharePlace.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3A9A3D5283A6A60006F3CE6 /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3CF283A6A5F006F3CE6 /* Color+Ex.swift */; };
+		D3A9A3D7283A6A60006F3CE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3D1283A6A60006F3CE6 /* LocationManager.swift */; };
+		D3A9A3D8283A6A60006F3CE6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3D2283A6A60006F3CE6 /* RootView.swift */; };
+		D3A9A3D9283A6A60006F3CE6 /* PlaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3D3283A6A60006F3CE6 /* PlaceManager.swift */; };
+		D3A9A3DA283A6A60006F3CE6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3D4283A6A60006F3CE6 /* MapView.swift */; };
+		D3A9A3DD283A6A81006F3CE6 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = D3A9A3DC283A6A81006F3CE6 /* PartialSheet */; };
+		D3A9A3E0283A6A8F006F3CE6 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = D3A9A3DF283A6A8F006F3CE6 /* SFSafeSymbols */; };
+		D3A9A3E2283A6F42006F3CE6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3E1283A6F42006F3CE6 /* Place.swift */; };
+		D3A9A3E4283A723D006F3CE6 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3E3283A723D006F3CE6 /* MapModel.swift */; };
+		D3A9A3E6283A7419006F3CE6 /* MonitorPlacePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3E5283A7419006F3CE6 /* MonitorPlacePage.swift */; };
+		D3A9A3E8283A743F006F3CE6 /* MonitorPlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3E7283A743F006F3CE6 /* MonitorPlaceModel.swift */; };
+		D3A9A3F2283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */; };
+		D3A9A3F3283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */; };
+		D3A9A3F4283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */; };
+		D3A9A3F5283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3F1283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3A9A39F283A5C1D006F3CE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3A9A381283A5C1B006F3CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3A9A388283A5C1B006F3CE6;
+			remoteInfo = ViLog;
+		};
+		D3A9A3A9283A5C1D006F3CE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3A9A381283A5C1B006F3CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3A9A388283A5C1B006F3CE6;
+			remoteInfo = ViLog;
+		};
+		D3A9A3C7283A65BE006F3CE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3A9A381283A5C1B006F3CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3A9A3BE283A65BE006F3CE6;
+			remoteInfo = SharePlace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3A9A3CD283A65BE006F3CE6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D3A9A3C9283A65BE006F3CE6 /* D_SharePlace.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D3A9A389283A5C1B006F3CE6 /* D_ViLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D_ViLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9A38C283A5C1B006F3CE6 /* ViLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViLogApp.swift; sourceTree = "<group>"; };
+		D3A9A390283A5C1D006F3CE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3A9A393283A5C1D006F3CE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3A9A395283A5C1D006F3CE6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D3A9A398283A5C1D006F3CE6 /* ViLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViLog.xcdatamodel; sourceTree = "<group>"; };
+		D3A9A39E283A5C1D006F3CE6 /* ViLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9A3A2283A5C1D006F3CE6 /* ViLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViLogTests.swift; sourceTree = "<group>"; };
+		D3A9A3A8283A5C1D006F3CE6 /* ViLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9A3AC283A5C1D006F3CE6 /* ViLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViLogUITests.swift; sourceTree = "<group>"; };
+		D3A9A3AE283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViLogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = D_SharePlace.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9A3C1283A65BE006F3CE6 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		D3A9A3C4283A65BE006F3CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D3A9A3C6283A65BE006F3CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A9A3CF283A6A5F006F3CE6 /* Color+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Ex.swift"; sourceTree = "<group>"; };
+		D3A9A3D1283A6A60006F3CE6 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D3A9A3D2283A6A60006F3CE6 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D3A9A3D3283A6A60006F3CE6 /* PlaceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceManager.swift; sourceTree = "<group>"; };
+		D3A9A3D4283A6A60006F3CE6 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D3A9A3E1283A6F42006F3CE6 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		D3A9A3E3283A723D006F3CE6 /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		D3A9A3E5283A7419006F3CE6 /* MonitorPlacePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorPlacePage.swift; sourceTree = "<group>"; };
+		D3A9A3E7283A743F006F3CE6 /* MonitorPlaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorPlaceModel.swift; sourceTree = "<group>"; };
+		D3A9A3ED283A7FB3006F3CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitSnapshot+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitSnapshot+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonitorPlace+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D3A9A3F1283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonitorPlace+CoreDataProperties.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3A9A386283A5C1B006F3CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A9A3E0283A6A8F006F3CE6 /* SFSafeSymbols in Frameworks */,
+				D3A9A3DD283A6A81006F3CE6 /* PartialSheet in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A39B283A5C1D006F3CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A3A5283A5C1D006F3CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A3BC283A65BE006F3CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3A9A380283A5C1B006F3CE6 = {
+			isa = PBXGroup;
+			children = (
+				D3A9A38B283A5C1B006F3CE6 /* ViLog */,
+				D3A9A3A1283A5C1D006F3CE6 /* ViLogTests */,
+				D3A9A3AB283A5C1D006F3CE6 /* ViLogUITests */,
+				D3A9A3C0283A65BE006F3CE6 /* SharePlace */,
+				D3A9A38A283A5C1B006F3CE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3A9A38A283A5C1B006F3CE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A389283A5C1B006F3CE6 /* D_ViLog.app */,
+				D3A9A39E283A5C1D006F3CE6 /* ViLogTests.xctest */,
+				D3A9A3A8283A5C1D006F3CE6 /* ViLogUITests.xctest */,
+				D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3A9A38B283A5C1B006F3CE6 /* ViLog */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3ED283A7FB3006F3CE6 /* Info.plist */,
+				D3A9A395283A5C1D006F3CE6 /* Persistence.swift */,
+				D3A9A3D2283A6A60006F3CE6 /* RootView.swift */,
+				D3A9A38C283A5C1B006F3CE6 /* ViLogApp.swift */,
+				D3A9A390283A5C1D006F3CE6 /* Assets.xcassets */,
+				D3A9A3EA283A7BC8006F3CE6 /* Data */,
+				D3A9A3EB283A7BCE006F3CE6 /* Generated */,
+				D3A9A3EC283A7BD8006F3CE6 /* Manager */,
+				D3A9A392283A5C1D006F3CE6 /* Preview Content */,
+				D3A9A3E9283A7BB9006F3CE6 /* UI */,
+				D3A9A3CE283A6A5F006F3CE6 /* Utils */,
+				D3A9A397283A5C1D006F3CE6 /* ViLog.xcdatamodeld */,
+			);
+			path = ViLog;
+			sourceTree = "<group>";
+		};
+		D3A9A392283A5C1D006F3CE6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A393283A5C1D006F3CE6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3A9A3A1283A5C1D006F3CE6 /* ViLogTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3A2283A5C1D006F3CE6 /* ViLogTests.swift */,
+			);
+			path = ViLogTests;
+			sourceTree = "<group>";
+		};
+		D3A9A3AB283A5C1D006F3CE6 /* ViLogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3AC283A5C1D006F3CE6 /* ViLogUITests.swift */,
+				D3A9A3AE283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift */,
+			);
+			path = ViLogUITests;
+			sourceTree = "<group>";
+		};
+		D3A9A3C0283A65BE006F3CE6 /* SharePlace */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3C1283A65BE006F3CE6 /* ShareViewController.swift */,
+				D3A9A3C3283A65BE006F3CE6 /* MainInterface.storyboard */,
+				D3A9A3C6283A65BE006F3CE6 /* Info.plist */,
+			);
+			path = SharePlace;
+			sourceTree = "<group>";
+		};
+		D3A9A3CE283A6A5F006F3CE6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3CF283A6A5F006F3CE6 /* Color+Ex.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D3A9A3E9283A7BB9006F3CE6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3E7283A743F006F3CE6 /* MonitorPlaceModel.swift */,
+				D3A9A3E5283A7419006F3CE6 /* MonitorPlacePage.swift */,
+				D3A9A3E3283A723D006F3CE6 /* MapModel.swift */,
+				D3A9A3D4283A6A60006F3CE6 /* MapView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D3A9A3EA283A7BC8006F3CE6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3E1283A6F42006F3CE6 /* Place.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D3A9A3EB283A7BCE006F3CE6 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */,
+				D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */,
+				D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */,
+				D3A9A3F1283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		D3A9A3EC283A7BD8006F3CE6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D3A9A3D1283A6A60006F3CE6 /* LocationManager.swift */,
+				D3A9A3D3283A6A60006F3CE6 /* PlaceManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3A9A388283A5C1B006F3CE6 /* ViLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A9A3B2283A5C1D006F3CE6 /* Build configuration list for PBXNativeTarget "ViLog" */;
+			buildPhases = (
+				D3A9A385283A5C1B006F3CE6 /* Sources */,
+				D3A9A386283A5C1B006F3CE6 /* Frameworks */,
+				D3A9A387283A5C1B006F3CE6 /* Resources */,
+				D3A9A3CD283A65BE006F3CE6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3A9A3C8283A65BE006F3CE6 /* PBXTargetDependency */,
+			);
+			name = ViLog;
+			packageProductDependencies = (
+				D3A9A3DC283A6A81006F3CE6 /* PartialSheet */,
+				D3A9A3DF283A6A8F006F3CE6 /* SFSafeSymbols */,
+			);
+			productName = ViLog;
+			productReference = D3A9A389283A5C1B006F3CE6 /* D_ViLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3A9A39D283A5C1D006F3CE6 /* ViLogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A9A3B5283A5C1D006F3CE6 /* Build configuration list for PBXNativeTarget "ViLogTests" */;
+			buildPhases = (
+				D3A9A39A283A5C1D006F3CE6 /* Sources */,
+				D3A9A39B283A5C1D006F3CE6 /* Frameworks */,
+				D3A9A39C283A5C1D006F3CE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3A9A3A0283A5C1D006F3CE6 /* PBXTargetDependency */,
+			);
+			name = ViLogTests;
+			productName = ViLogTests;
+			productReference = D3A9A39E283A5C1D006F3CE6 /* ViLogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3A9A3A7283A5C1D006F3CE6 /* ViLogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A9A3B8283A5C1D006F3CE6 /* Build configuration list for PBXNativeTarget "ViLogUITests" */;
+			buildPhases = (
+				D3A9A3A4283A5C1D006F3CE6 /* Sources */,
+				D3A9A3A5283A5C1D006F3CE6 /* Frameworks */,
+				D3A9A3A6283A5C1D006F3CE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3A9A3AA283A5C1D006F3CE6 /* PBXTargetDependency */,
+			);
+			name = ViLogUITests;
+			productName = ViLogUITests;
+			productReference = D3A9A3A8283A5C1D006F3CE6 /* ViLogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D3A9A3BE283A65BE006F3CE6 /* SharePlace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A9A3CA283A65BE006F3CE6 /* Build configuration list for PBXNativeTarget "SharePlace" */;
+			buildPhases = (
+				D3A9A3BB283A65BE006F3CE6 /* Sources */,
+				D3A9A3BC283A65BE006F3CE6 /* Frameworks */,
+				D3A9A3BD283A65BE006F3CE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharePlace;
+			productName = SharePlace;
+			productReference = D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3A9A381283A5C1B006F3CE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D3A9A388283A5C1B006F3CE6 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					D3A9A39D283A5C1D006F3CE6 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = D3A9A388283A5C1B006F3CE6;
+					};
+					D3A9A3A7283A5C1D006F3CE6 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = D3A9A388283A5C1B006F3CE6;
+					};
+					D3A9A3BE283A65BE006F3CE6 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = D3A9A384283A5C1B006F3CE6 /* Build configuration list for PBXProject "ViLog" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3A9A380283A5C1B006F3CE6;
+			packageReferences = (
+				D3A9A3DB283A6A81006F3CE6 /* XCRemoteSwiftPackageReference "PartialSheet" */,
+				D3A9A3DE283A6A8F006F3CE6 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+			);
+			productRefGroup = D3A9A38A283A5C1B006F3CE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3A9A388283A5C1B006F3CE6 /* ViLog */,
+				D3A9A39D283A5C1D006F3CE6 /* ViLogTests */,
+				D3A9A3A7283A5C1D006F3CE6 /* ViLogUITests */,
+				D3A9A3BE283A65BE006F3CE6 /* SharePlace */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3A9A387283A5C1B006F3CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A9A394283A5C1D006F3CE6 /* Preview Assets.xcassets in Resources */,
+				D3A9A391283A5C1D006F3CE6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A39C283A5C1D006F3CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A3A6283A5C1D006F3CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A3BD283A65BE006F3CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A9A3C5283A65BE006F3CE6 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3A9A385283A5C1B006F3CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A9A3E6283A7419006F3CE6 /* MonitorPlacePage.swift in Sources */,
+				D3A9A3E8283A743F006F3CE6 /* MonitorPlaceModel.swift in Sources */,
+				D3A9A3D5283A6A60006F3CE6 /* Color+Ex.swift in Sources */,
+				D3A9A3D7283A6A60006F3CE6 /* LocationManager.swift in Sources */,
+				D3A9A396283A5C1D006F3CE6 /* Persistence.swift in Sources */,
+				D3A9A3D8283A6A60006F3CE6 /* RootView.swift in Sources */,
+				D3A9A3D9283A6A60006F3CE6 /* PlaceManager.swift in Sources */,
+				D3A9A38D283A5C1B006F3CE6 /* ViLogApp.swift in Sources */,
+				D3A9A3F5283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift in Sources */,
+				D3A9A3E4283A723D006F3CE6 /* MapModel.swift in Sources */,
+				D3A9A3DA283A6A60006F3CE6 /* MapView.swift in Sources */,
+				D3A9A3F4283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift in Sources */,
+				D3A9A3F2283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */,
+				D3A9A3F3283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift in Sources */,
+				D3A9A399283A5C1D006F3CE6 /* ViLog.xcdatamodeld in Sources */,
+				D3A9A3E2283A6F42006F3CE6 /* Place.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A39A283A5C1D006F3CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A9A3A3283A5C1D006F3CE6 /* ViLogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A3A4283A5C1D006F3CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A9A3AF283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift in Sources */,
+				D3A9A3AD283A5C1D006F3CE6 /* ViLogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A9A3BB283A65BE006F3CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A9A3C2283A65BE006F3CE6 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3A9A3A0283A5C1D006F3CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3A9A388283A5C1B006F3CE6 /* ViLog */;
+			targetProxy = D3A9A39F283A5C1D006F3CE6 /* PBXContainerItemProxy */;
+		};
+		D3A9A3AA283A5C1D006F3CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3A9A388283A5C1B006F3CE6 /* ViLog */;
+			targetProxy = D3A9A3A9283A5C1D006F3CE6 /* PBXContainerItemProxy */;
+		};
+		D3A9A3C8283A65BE006F3CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3A9A3BE283A65BE006F3CE6 /* SharePlace */;
+			targetProxy = D3A9A3C7283A65BE006F3CE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3A9A3C3283A65BE006F3CE6 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3A9A3C4283A65BE006F3CE6 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3A9A3B0283A5C1D006F3CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3A9A3B1283A5C1D006F3CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3A9A3B3283A5C1D006F3CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ViLog/Preview Content\"";
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ViLog/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ViLogではマップを使用するため、位置情報の取得を「Appの使用中は許可」にお願いします";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ViLogではマップを使用するため、位置情報の取得を「Appの使用中は許可」にお願いします";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.fummicc1.ViLog-debug";
+				PRODUCT_NAME = "D_$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3A9A3B4283A5C1D006F3CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ViLog/Preview Content\"";
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ViLog/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "ViLogではマップを使用するため、位置情報の取得を「Appの使用中は許可」にお願いします";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "ViLogではマップを使用するため、位置情報の取得を「Appの使用中は許可」にお願いします";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.ViLog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3A9A3B6283A5C1D006F3CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.ViLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViLog.app/ViLog";
+			};
+			name = Debug;
+		};
+		D3A9A3B7283A5C1D006F3CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.ViLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViLog.app/ViLog";
+			};
+			name = Release;
+		};
+		D3A9A3B9283A5C1D006F3CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.ViLogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ViLog;
+			};
+			name = Debug;
+		};
+		D3A9A3BA283A5C1D006F3CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.ViLogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ViLog;
+			};
+			name = Release;
+		};
+		D3A9A3CB283A65BE006F3CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SharePlace/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SharePlace;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.fummicc1.ViLog-debug.SharePlace";
+				PRODUCT_NAME = "D_$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3A9A3CC283A65BE006F3CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SharePlace/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SharePlace;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.ViLog.SharePlace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3A9A384283A5C1B006F3CE6 /* Build configuration list for PBXProject "ViLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A9A3B0283A5C1D006F3CE6 /* Debug */,
+				D3A9A3B1283A5C1D006F3CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A9A3B2283A5C1D006F3CE6 /* Build configuration list for PBXNativeTarget "ViLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A9A3B3283A5C1D006F3CE6 /* Debug */,
+				D3A9A3B4283A5C1D006F3CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A9A3B5283A5C1D006F3CE6 /* Build configuration list for PBXNativeTarget "ViLogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A9A3B6283A5C1D006F3CE6 /* Debug */,
+				D3A9A3B7283A5C1D006F3CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A9A3B8283A5C1D006F3CE6 /* Build configuration list for PBXNativeTarget "ViLogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A9A3B9283A5C1D006F3CE6 /* Debug */,
+				D3A9A3BA283A5C1D006F3CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A9A3CA283A65BE006F3CE6 /* Build configuration list for PBXNativeTarget "SharePlace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A9A3CB283A65BE006F3CE6 /* Debug */,
+				D3A9A3CC283A65BE006F3CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3A9A3DB283A6A81006F3CE6 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		D3A9A3DE283A6A8F006F3CE6 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3A9A3DC283A6A81006F3CE6 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3A9A3DB283A6A81006F3CE6 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+		D3A9A3DF283A6A8F006F3CE6 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3A9A3DE283A6A8F006F3CE6 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D3A9A397283A5C1D006F3CE6 /* ViLog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3A9A398283A5C1D006F3CE6 /* ViLog.xcdatamodel */,
+			);
+			currentVersion = D3A9A398283A5C1D006F3CE6 /* ViLog.xcdatamodel */;
+			path = ViLog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D3A9A381283A5C1B006F3CE6 /* Project object */;
+}
