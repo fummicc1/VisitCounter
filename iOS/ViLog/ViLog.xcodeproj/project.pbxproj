@@ -18,7 +18,6 @@
 		D3A9A3AF283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3AE283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift */; };
 		D3A9A3C2283A65BE006F3CE6 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3C1283A65BE006F3CE6 /* ShareViewController.swift */; };
 		D3A9A3C5283A65BE006F3CE6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A9A3C3283A65BE006F3CE6 /* MainInterface.storyboard */; };
-		D3A9A3C9283A65BE006F3CE6 /* D_SharePlace.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D3A9A3D5283A6A60006F3CE6 /* Color+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3CF283A6A5F006F3CE6 /* Color+Ex.swift */; };
 		D3A9A3D7283A6A60006F3CE6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3D1283A6A60006F3CE6 /* LocationManager.swift */; };
 		D3A9A3D8283A6A60006F3CE6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3D2283A6A60006F3CE6 /* RootView.swift */; };
@@ -39,6 +38,7 @@
 		D3A9A404283AAD67006F3CE6 /* MonitorPlace+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */; };
 		D3A9A405283AAD67006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */; };
 		D3A9A406283AAD67006F3CE6 /* VisitSnapshot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */; };
+		D3DA1EDA283B58A800A1173E /* SharePlace.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3A9A3BF283A65BE006F3CE6 /* SharePlace.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 			remoteGlobalIDString = D3A9A388283A5C1B006F3CE6;
 			remoteInfo = ViLog;
 		};
-		D3A9A3C7283A65BE006F3CE6 /* PBXContainerItemProxy */ = {
+		D3DA1EDB283B58A800A1173E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D3A9A381283A5C1B006F3CE6 /* Project object */;
 			proxyType = 1;
@@ -66,13 +66,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D3A9A3CD283A65BE006F3CE6 /* Embed App Extensions */ = {
+		D3DA1EDD283B58A900A1173E /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D3A9A3C9283A65BE006F3CE6 /* D_SharePlace.appex in Embed App Extensions */,
+				D3DA1EDA283B58A800A1173E /* SharePlace.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,7 +91,7 @@
 		D3A9A3A8283A5C1D006F3CE6 /* ViLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A9A3AC283A5C1D006F3CE6 /* ViLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViLogUITests.swift; sourceTree = "<group>"; };
 		D3A9A3AE283A5C1D006F3CE6 /* ViLogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViLogUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = D_SharePlace.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A9A3BF283A65BE006F3CE6 /* SharePlace.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SharePlace.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A9A3C1283A65BE006F3CE6 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		D3A9A3C4283A65BE006F3CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D3A9A3C6283A65BE006F3CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +159,7 @@
 				D3A9A3AB283A5C1D006F3CE6 /* ViLogUITests */,
 				D3A9A3C0283A65BE006F3CE6 /* SharePlace */,
 				D3A9A38A283A5C1B006F3CE6 /* Products */,
+				D3DA1ED9283B58A800A1173E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,7 +169,7 @@
 				D3A9A389283A5C1B006F3CE6 /* D_ViLog.app */,
 				D3A9A39E283A5C1D006F3CE6 /* ViLogTests.xctest */,
 				D3A9A3A8283A5C1D006F3CE6 /* ViLogUITests.xctest */,
-				D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */,
+				D3A9A3BF283A65BE006F3CE6 /* SharePlace.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,6 +280,13 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		D3DA1ED9283B58A800A1173E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,12 +297,12 @@
 				D3A9A385283A5C1B006F3CE6 /* Sources */,
 				D3A9A386283A5C1B006F3CE6 /* Frameworks */,
 				D3A9A387283A5C1B006F3CE6 /* Resources */,
-				D3A9A3CD283A65BE006F3CE6 /* Embed App Extensions */,
+				D3DA1EDD283B58A900A1173E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D3A9A3C8283A65BE006F3CE6 /* PBXTargetDependency */,
+				D3DA1EDC283B58A800A1173E /* PBXTargetDependency */,
 			);
 			name = ViLog;
 			packageProductDependencies = (
@@ -355,7 +363,7 @@
 			);
 			name = SharePlace;
 			productName = SharePlace;
-			productReference = D3A9A3BF283A65BE006F3CE6 /* D_SharePlace.appex */;
+			productReference = D3A9A3BF283A65BE006F3CE6 /* SharePlace.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -511,10 +519,10 @@
 			target = D3A9A388283A5C1B006F3CE6 /* ViLog */;
 			targetProxy = D3A9A3A9283A5C1D006F3CE6 /* PBXContainerItemProxy */;
 		};
-		D3A9A3C8283A65BE006F3CE6 /* PBXTargetDependency */ = {
+		D3DA1EDC283B58A800A1173E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D3A9A3BE283A65BE006F3CE6 /* SharePlace */;
-			targetProxy = D3A9A3C7283A65BE006F3CE6 /* PBXContainerItemProxy */;
+			targetProxy = D3DA1EDB283B58A800A1173E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -647,7 +655,6 @@
 		D3A9A3B3283A5C1D006F3CE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ViLog/ViLogDebug.entitlements;
@@ -681,7 +688,6 @@
 		D3A9A3B4283A5C1D006F3CE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ViLog/ViLog.entitlements;
@@ -807,7 +813,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.fummicc1.ViLog-debug.SharePlace";
-				PRODUCT_NAME = "D_$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
