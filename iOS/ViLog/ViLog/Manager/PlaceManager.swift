@@ -10,7 +10,7 @@ public protocol PlaceManager {
     func getVisits(place: MonitorPlace) -> [VisitSnapshot]
 }
 
-public class PlaceManagerImpl: NSObject, PlaceManager {
+public class PlaceManagerImpl: NSObject {
     private let placesSubject: CurrentValueSubject<[Place], Never> = .init([])
 
     private let persistenceController: PersistenceController
@@ -18,8 +18,24 @@ public class PlaceManagerImpl: NSObject, PlaceManager {
     public init(persistenceController: PersistenceController) {
         self.persistenceController = persistenceController
         super.init()
+        guard let places = try? persistenceController.container.viewContext.fetch(NSFetchRequest<MonitorPlace>(
+            entityName: "MonitorPlace")
+        ) else {
+            return
+        }
+        placesSubject.send(places.map({ monitor in
+            Place(
+                id: String(describing: monitor.id),
+                lat: monitor.latitude,
+                lng: monitor.longitude,
+                visits: getVisits(place: monitor),
+                name: monitor.name ?? ""
+            )
+        }))
     }
+}
 
+extension PlaceManagerImpl: PlaceManager {
 
     public var places: [Place] {
         placesSubject.value
@@ -39,7 +55,4 @@ public class PlaceManagerImpl: NSObject, PlaceManager {
         }
         return []
     }
-}
-
-extension PlaceManagerImpl {
 }

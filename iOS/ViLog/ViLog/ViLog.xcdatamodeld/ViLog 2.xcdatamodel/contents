@@ -11,7 +11,7 @@
         <relationship name="monitorPlace" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MonitorPlace"/>
     </entity>
     <elements>
-        <element name="MonitorPlace" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="MonitorPlace" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="VisitSnapshot" positionX="-54" positionY="18" width="128" height="59"/>
     </elements>
 </model>

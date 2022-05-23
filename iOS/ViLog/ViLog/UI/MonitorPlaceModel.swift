@@ -6,14 +6,23 @@ import UserNotifications
 class MonitorPlaceModel: ObservableObject {
 
     @Published var alreadyNotifiable: Bool = false
-    @Published var storedMonitoringPlace: MonitorPlace?
+    @Published var place: Place
     @Published var error: String? = nil
 
-    func willResignNotification() {
-        guard let storedMonitoringPlace = storedMonitoringPlace else {
-            return
+    init(place: Place) {
+        self.place = place
+        Task {
+            let requests = await UNUserNotificationCenter.current().pendingNotificationRequests()
+            await MainActor.run(body: {
+                self.alreadyNotifiable = requests.contains { request in
+                    request.identifier == String(describing: place.id)
+                }
+            })
         }
-        let id = String(describing: storedMonitoringPlace.id)
+    }
+
+    func willResignNotification() {
+        let id = String(describing: place.id)
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
         alreadyNotifiable = false
     }
@@ -26,18 +35,15 @@ class MonitorPlaceModel: ObservableObject {
             return
         }
 
-        guard let storedMonitoringPlace = storedMonitoringPlace else {
-            return
-        }
-        let id = String(describing: storedMonitoringPlace)
+        let id = String(describing: place.id)
         let content = UNMutableNotificationContent()
-        content.title = "\(storedMonitoringPlace.name)が近くにあります"
+        content.title = "\(place.name)が近くにあります"
         content.body = "アプリを開いて確認しましょう"
         let trigger = UNLocationNotificationTrigger(
             region: CLCircularRegion(
                 center: CLLocationCoordinate2D(
-                    latitude: storedMonitoringPlace.latitude,
-                    longitude: storedMonitoringPlace.longitude
+                    latitude: self.place.lat,
+                    longitude: self.place.lng
                 ),
                 radius: 15,
                 identifier: id
@@ -51,6 +57,9 @@ class MonitorPlaceModel: ObservableObject {
         )
         do {
             try await UNUserNotificationCenter.current().add(request)
+            await MainActor.run(body: {
+                self.alreadyNotifiable = true
+            })
         } catch {
             self.error = error.localizedDescription
         }

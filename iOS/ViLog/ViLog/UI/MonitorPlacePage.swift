@@ -5,27 +5,25 @@ struct MonitorPlacePage: View {
 
     @Environment(\.managedObjectContext) var context
 
-    @FetchRequest(sortDescriptors: []) var visits: FetchedResults<VisitSnapshot>
-    @FetchRequest(sortDescriptors: []) var monitorPlaces: FetchedResults<MonitorPlace>
-
     @ObservedObject var model: MonitorPlaceModel
-
-    let place: Place
 
     var body: some View {
         VStack {
-            Text(place.name)
+            Text(model.place.name)
                 .font(.title3)
                 .foregroundColor(Color(uiColor: .label))
                 .bold()
-            if model.storedMonitoringPlace != nil {
+            if model.alreadyNotifiable {
                 Text("現在地との距離が30メートル以内に入ると通知がなります")
             }
             HStack {
                 Button(model.alreadyNotifiable ? "通知解除" : "通知登録") {
                     if model.alreadyNotifiable {
                         model.willResignNotification()
-                        return
+                    } else {
+                        Task {
+                            await model.didRegisterNotification()
+                        }
                     }
                 }
                 .padding([.horizontal], 12)
@@ -44,16 +42,6 @@ struct MonitorPlacePage: View {
         })) {
             if let error = model.error {
                 Text(error)
-            }
-        }
-        .onAppear {
-            if let stored = monitorPlaces.filter({ monitorPlace in
-                monitorPlace.latitude == place.lat && monitorPlace.longitude == place.lng
-            }).first {
-                model.storedMonitoringPlace = stored
-                model.alreadyNotifiable = true
-            } else {
-                model.alreadyNotifiable = false
             }
         }
     }

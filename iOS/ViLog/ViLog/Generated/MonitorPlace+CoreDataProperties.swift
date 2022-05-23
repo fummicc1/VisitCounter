@@ -2,7 +2,7 @@
 //  MonitorPlace+CoreDataProperties.swift
 //  ViLog
 //
-//  Created by Fumiya Tanaka on 2022/05/22.
+//  Created by Fumiya Tanaka on 2022/05/23.
 //
 //
 
@@ -16,11 +16,14 @@ extension MonitorPlace {
         return NSFetchRequest<MonitorPlace>(entityName: "MonitorPlace")
     }
 
+    @NSManaged public var detail: String?
     @NSManaged public var latitude: Double
     @NSManaged public var longitude: Double
     @NSManaged public var name: String?
-    @NSManaged public var detail: String?
 
+    public var id: String {
+        "\(String(format: "%.5f", latitude)),\(String(format: "%.5f", latitude))"
+    }
 }
 
 extension MonitorPlace : Identifiable {

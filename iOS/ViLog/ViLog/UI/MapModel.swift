@@ -13,10 +13,9 @@ class MapModel: ObservableObject {
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(key: "visitedAt", ascending: true)
     ]) var visits: FetchedResults<VisitSnapshot>
-    @Published var selectedPlace: Place?
-    @Published var searchResults: [Place] = []
-    @Published var searchText: String = ""
 
+    @Published var selectedPlace: Place?
+    @Published var places: [Place] = []
     @Published var region: MKCoordinateRegion = .init(
         // Default: Tokyo Region
         center: CLLocationCoordinate2D(
@@ -49,7 +48,7 @@ class MapModel: ObservableObject {
             .store(in: &cancellables)
 
         placeManager.placesPublisher
-            .assign(to: &$searchResults)
+            .assign(to: &$places)
 
     }
 

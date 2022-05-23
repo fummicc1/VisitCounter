@@ -87,9 +87,33 @@ class ShareViewController: UICollectionViewController {
 
     func save() {
         Storage.shared.saveContext()
-        let alert = UIAlertController(
+        let locationManager = CLLocationManager()
+        if let place = place, CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+            let region = CLCircularRegion(
+                center: CLLocationCoordinate2D(
+                    latitude: place.latitude,
+                    longitude: place.longitude
+                ),
+                radius: 15,
+                identifier: String(describing: place.id)
+            )
+            locationManager.startMonitoring(for: region)
+            showAlert(
+                title: "インポート完了",
+                message: "ViLogに位置情報を保存しました。モニタリングが開始します。"
+            )
+            return
+        }
+        showAlert(
             title: "インポート完了",
-            message: "ViLogに位置情報を保存しました",
+            message: "ViLogに位置情報を保存しました。アプリを開いてモニタリングを開始してください。"
+        )
+    }
+
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
             preferredStyle: .alert
         )
         alert.addAction(.init(title: "閉じる", style: .default, handler: { _ in

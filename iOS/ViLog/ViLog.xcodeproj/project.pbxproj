@@ -114,6 +114,7 @@
 		D3A9A3F8283A8AB5006F3CE6 /* SharePlace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharePlace.entitlements; sourceTree = "<group>"; };
 		D3A9A3F9283A8B16006F3CE6 /* SharePlaceDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharePlaceDebug.entitlements; sourceTree = "<group>"; };
 		D3A9A400283AA91E006F3CE6 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		D3DA1ED6283B438000A1173E /* ViLog 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ViLog 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -927,9 +928,10 @@
 		D3A9A397283A5C1D006F3CE6 /* ViLog.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				D3DA1ED6283B438000A1173E /* ViLog 2.xcdatamodel */,
 				D3A9A398283A5C1D006F3CE6 /* ViLog.xcdatamodel */,
 			);
-			currentVersion = D3A9A398283A5C1D006F3CE6 /* ViLog.xcdatamodel */;
+			currentVersion = D3DA1ED6283B438000A1173E /* ViLog 2.xcdatamodel */;
 			path = ViLog.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

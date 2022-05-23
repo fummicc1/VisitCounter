@@ -15,7 +15,7 @@ struct MapView: View {
                     interactionModes: .all,
                     showsUserLocation: true,
                     userTrackingMode: .constant(.none),
-                    annotationItems: model.searchResults,
+                    annotationItems: model.places,
                     annotationContent: { item in
                         MapAnnotation(
                             coordinate: CLLocationCoordinate2D(
@@ -23,7 +23,7 @@ struct MapView: View {
                                 longitude: item.lng
                             )
                         ) {
-                            Text("0")
+                            Text(String(item.visits.count))
                                 .frame(width: 32, height: 32)
                                 .background(Color(uiColor: .systemBackground))
                                 .clipShape(Circle())
@@ -85,8 +85,7 @@ struct MapView: View {
         ) {
             if let place = model.selectedPlace {
                 MonitorPlacePage(
-                    model: MonitorPlaceModel(),
-                    place: place
+                    model: MonitorPlaceModel(place: place)
                 )
             }
         }
