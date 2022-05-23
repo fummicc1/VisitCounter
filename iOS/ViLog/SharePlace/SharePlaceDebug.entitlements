@@ -8,7 +8,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)dev.fummicc1.ViLog-debug.SharePlace</string>
+		<string>$(AppIdentifierPrefix)dev.fummicc1.ViLog-debug</string>
 	</array>
 </dict>
 </plist>

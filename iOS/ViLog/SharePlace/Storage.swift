@@ -54,7 +54,6 @@ class Storage {
         return container
     }()
 
-    // MARK: - Core Data Saving support
     func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -66,5 +65,12 @@ class Storage {
                 print("Saving error: \(nserror)")
             }
         }
+    }
+
+    func fetchAllMonitoringPlaces() -> [MonitorPlace] {
+        guard let response = try? persistentContainer.viewContext.fetch(.init(entityName: "MonitorPlace")) as? [MonitorPlace] else {
+            return []
+        }
+        return response
     }
 }
