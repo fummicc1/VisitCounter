@@ -6,6 +6,7 @@ public protocol LocationManager {
     var currentCoordinate: CLLocationCoordinate2D? { get }
     var coordinate: AnyPublisher<CLLocationCoordinate2D, Never> { get }
     var authorizationStatus: AnyPublisher<CLAuthorizationStatus, Never> { get }
+    var onEnterRegion: AnyPublisher<CLCircularRegion, Never> { get }
     var error: AnyPublisher<Error, Never> { get }
 
     func request()
@@ -19,6 +20,7 @@ public class LocationManagerImpl: NSObject, CLLocationManagerDelegate, LocationM
     private let coordinateRelay: CurrentValueSubject<CLLocationCoordinate2D?, Never> = .init(nil)
     private let errorRelay: PassthroughSubject<Error, Never> = .init()
     private let authorizationStatusRelay: PassthroughSubject<CLAuthorizationStatus, Never> = .init()
+    private let onEnterRegionRelay: PassthroughSubject<CLCircularRegion, Never> = .init()
     private var prepareForRequestAlways: Bool = false
     private let manager = CLLocationManager()
 
@@ -33,6 +35,9 @@ public class LocationManagerImpl: NSObject, CLLocationManagerDelegate, LocationM
     }
     public var authorizationStatus: AnyPublisher<CLAuthorizationStatus, Never> {
         authorizationStatusRelay.eraseToAnyPublisher()
+    }
+    public var onEnterRegion: AnyPublisher<CLCircularRegion, Never> {
+        onEnterRegionRelay.eraseToAnyPublisher()
     }
 
     public static let shared: LocationManagerImpl = .init()
@@ -91,7 +96,6 @@ extension LocationManagerImpl {
 
         if manager.authorizationStatus == .authorizedWhenInUse || manager.authorizationStatus == .authorizedAlways {
             manager.startUpdatingLocation()
-            manager.startMonitoringSignificantLocationChanges()
         }
     }
 
@@ -99,5 +103,12 @@ extension LocationManagerImpl {
         if let location = locations.last {
             coordinateRelay.send(location.coordinate)
         }
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        guard let region = region as? CLCircularRegion else {
+            return
+        }
+        onEnterRegionRelay.send(region)
     }
 }

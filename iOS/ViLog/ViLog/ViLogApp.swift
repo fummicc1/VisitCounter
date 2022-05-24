@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import PartialSheet
 
 @main
@@ -32,9 +33,28 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     let persistenceController = PersistenceController.shared
     let placeManager: PlaceManager = PlaceManagerImpl(persistenceController: .shared)
     let locationManager: LocationManager = LocationManagerImpl.shared
+    private var cancellable: AnyCancellable?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         UNUserNotificationCenter.current().delegate = self
+        cancellable = locationManager.onEnterRegion.sink { region in
+            do {
+                let places: [MonitorPlace] = try self.persistenceController.container.viewContext.fetch(
+                    .init(entityName: "MonitorPlace")
+                )
+                guard let place = places.first(where: { region.identifier == String(describing: $0.id) }) else {
+                    // TODO: Notify as execption
+                    return
+                }
+                let visiting = VisitSnapshot(context: self.persistenceController.container.viewContext)
+                visiting.monitorPlace = place
+                visiting.visitedAt = Date()
+                try self.persistenceController.container.viewContext.save()
+            } catch {
+                // TODO: Handle error
+                print(error)
+            }
+        }
         return true
     }
 }
