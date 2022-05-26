@@ -10,9 +10,26 @@ struct MonitorPlacePage: View {
     var body: some View {
         VStack {
             Text(model.place.name)
-                .font(.title3)
+                .font(.title2)
                 .foregroundColor(Color(uiColor: .label))
                 .bold()
+            if !model.place.visits.isEmpty {
+                Divider()
+                VStack(spacing: 0) {
+                    Text("履歴")
+                        .font(.title3)
+                        .bold()
+                    List {
+                        ForEach(model.place.visits) { visit in
+                            if let visitedAt = visit.visitedAt {
+                                Text(visitedAt, format: .dateTime)
+                            }
+                        }
+                    }
+                    .frame(height: 200)
+                }
+                Divider()
+            }
             if model.alreadyNotifiable {
                 Text("現在地との距離が30メートル以内に入ると通知がなります")
             }

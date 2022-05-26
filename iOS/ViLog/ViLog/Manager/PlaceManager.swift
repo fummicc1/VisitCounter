@@ -46,7 +46,8 @@ extension PlaceManagerImpl: PlaceManager {
     }
 
     public func getVisits(place: MonitorPlace) -> [VisitSnapshot] {
-        let request = NSFetchRequest<VisitSnapshot>(entityName: "VisitSnapshot")
+        let request = VisitSnapshot.fetchRequest()
+        request.predicate = NSPredicate(format: "monitorPlace = %@", place)
         do {
             let visits = try persistenceController.container.viewContext.fetch(request)
             return visits
