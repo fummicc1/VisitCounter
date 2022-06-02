@@ -31,14 +31,16 @@
 		D3A9A3E8283A743F006F3CE6 /* MonitorPlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3E7283A743F006F3CE6 /* MonitorPlaceModel.swift */; };
 		D3A9A3F2283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */; };
 		D3A9A3F3283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */; };
-		D3A9A3F4283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */; };
 		D3A9A3F5283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3F1283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift */; };
 		D3A9A401283AA91E006F3CE6 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A400283AA91E006F3CE6 /* Storage.swift */; };
 		D3A9A403283AAD67006F3CE6 /* MonitorPlace+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3F1283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift */; };
-		D3A9A404283AAD67006F3CE6 /* MonitorPlace+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */; };
 		D3A9A405283AAD67006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */; };
 		D3A9A406283AAD67006F3CE6 /* VisitSnapshot+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */; };
 		D3DA1EDA283B58A800A1173E /* SharePlace.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D3A9A3BF283A65BE006F3CE6 /* SharePlace.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3DB55F52848D0D100137407 /* VisitingCountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB55F42848D0D100137407 /* VisitingCountManager.swift */; };
+		D3DB55FD2848D90300137407 /* MonitorPlace+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB55FC2848D90300137407 /* MonitorPlace+CoreDataClass.swift */; };
+		D3DB55FE2848D92000137407 /* MonitorPlace+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB55FC2848D90300137407 /* MonitorPlace+CoreDataClass.swift */; };
+		D3DB56002848EEE700137407 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB55FF2848EEE700137407 /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +109,6 @@
 		D3A9A3ED283A7FB3006F3CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitSnapshot+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitSnapshot+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonitorPlace+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D3A9A3F1283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonitorPlace+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D3A9A3F6283A8A6A006F3CE6 /* ViLogDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ViLogDebug.entitlements; sourceTree = "<group>"; };
 		D3A9A3F7283A8A83006F3CE6 /* ViLog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ViLog.entitlements; sourceTree = "<group>"; };
@@ -115,6 +116,9 @@
 		D3A9A3F9283A8B16006F3CE6 /* SharePlaceDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SharePlaceDebug.entitlements; sourceTree = "<group>"; };
 		D3A9A400283AA91E006F3CE6 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		D3DA1ED6283B438000A1173E /* ViLog 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ViLog 2.xcdatamodel"; sourceTree = "<group>"; };
+		D3DB55F42848D0D100137407 /* VisitingCountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitingCountManager.swift; sourceTree = "<group>"; };
+		D3DB55FC2848D90300137407 /* MonitorPlace+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MonitorPlace+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D3DB55FF2848EEE700137407 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 				D3A9A3E9283A7BB9006F3CE6 /* UI */,
 				D3A9A3CE283A6A5F006F3CE6 /* Utils */,
 				D3A9A397283A5C1D006F3CE6 /* ViLog.xcdatamodeld */,
+				D3DB55FF2848EEE700137407 /* Const.swift */,
 			);
 			path = ViLog;
 			sourceTree = "<group>";
@@ -263,9 +268,9 @@
 		D3A9A3EB283A7BCE006F3CE6 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				D3DB55FC2848D90300137407 /* MonitorPlace+CoreDataClass.swift */,
 				D3A9A3EE283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift */,
 				D3A9A3EF283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift */,
-				D3A9A3F0283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift */,
 				D3A9A3F1283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift */,
 			);
 			path = Generated;
@@ -276,6 +281,7 @@
 			children = (
 				D3A9A3D1283A6A60006F3CE6 /* LocationManager.swift */,
 				D3A9A3D3283A6A60006F3CE6 /* PlaceManager.swift */,
+				D3DB55F42848D0D100137407 /* VisitingCountManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -460,14 +466,16 @@
 				D3A9A3E8283A743F006F3CE6 /* MonitorPlaceModel.swift in Sources */,
 				D3A9A3D5283A6A60006F3CE6 /* Color+Ex.swift in Sources */,
 				D3A9A3D7283A6A60006F3CE6 /* LocationManager.swift in Sources */,
+				D3DB55FD2848D90300137407 /* MonitorPlace+CoreDataClass.swift in Sources */,
 				D3A9A396283A5C1D006F3CE6 /* Persistence.swift in Sources */,
+				D3DB55F52848D0D100137407 /* VisitingCountManager.swift in Sources */,
+				D3DB56002848EEE700137407 /* Const.swift in Sources */,
 				D3A9A3D8283A6A60006F3CE6 /* RootView.swift in Sources */,
 				D3A9A3D9283A6A60006F3CE6 /* PlaceManager.swift in Sources */,
 				D3A9A38D283A5C1B006F3CE6 /* ViLogApp.swift in Sources */,
 				D3A9A3F5283A83DB006F3CE6 /* MonitorPlace+CoreDataProperties.swift in Sources */,
 				D3A9A3E4283A723D006F3CE6 /* MapModel.swift in Sources */,
 				D3A9A3DA283A6A60006F3CE6 /* MapView.swift in Sources */,
-				D3A9A3F4283A83DB006F3CE6 /* MonitorPlace+CoreDataClass.swift in Sources */,
 				D3A9A3F2283A83DB006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */,
 				D3A9A3F3283A83DB006F3CE6 /* VisitSnapshot+CoreDataProperties.swift in Sources */,
 				D3A9A399283A5C1D006F3CE6 /* ViLog.xcdatamodeld in Sources */,
@@ -496,7 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A9A404283AAD67006F3CE6 /* MonitorPlace+CoreDataClass.swift in Sources */,
+				D3DB55FE2848D92000137407 /* MonitorPlace+CoreDataClass.swift in Sources */,
 				D3A9A406283AAD67006F3CE6 /* VisitSnapshot+CoreDataProperties.swift in Sources */,
 				D3A9A405283AAD67006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */,
 				D3A9A403283AAD67006F3CE6 /* MonitorPlace+CoreDataProperties.swift in Sources */,
@@ -659,7 +667,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ViLog/ViLogDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"ViLog/Preview Content\"";
 				DEVELOPMENT_TEAM = S8WBNKMKYU;
 				ENABLE_PREVIEWS = YES;
@@ -692,7 +700,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ViLog/ViLog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"ViLog/Preview Content\"";
 				DEVELOPMENT_TEAM = S8WBNKMKYU;
 				ENABLE_PREVIEWS = YES;

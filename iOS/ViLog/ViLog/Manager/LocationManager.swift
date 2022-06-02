@@ -7,6 +7,7 @@ public protocol LocationManager {
     var coordinate: AnyPublisher<CLLocationCoordinate2D, Never> { get }
     var authorizationStatus: AnyPublisher<CLAuthorizationStatus, Never> { get }
     var onEnterRegion: AnyPublisher<CLCircularRegion, Never> { get }
+    var onExitRegion: AnyPublisher<CLCircularRegion, Never> { get }
     var error: AnyPublisher<Error, Never> { get }
 
     func request()
@@ -21,6 +22,7 @@ public class LocationManagerImpl: NSObject, CLLocationManagerDelegate, LocationM
     private let errorRelay: PassthroughSubject<Error, Never> = .init()
     private let authorizationStatusRelay: PassthroughSubject<CLAuthorizationStatus, Never> = .init()
     private let onEnterRegionRelay: PassthroughSubject<CLCircularRegion, Never> = .init()
+    private let onExitRegionRelay: PassthroughSubject<CLCircularRegion, Never> = .init()
     private var prepareForRequestAlways: Bool = false
     private let manager = CLLocationManager()
 
@@ -38,6 +40,10 @@ public class LocationManagerImpl: NSObject, CLLocationManagerDelegate, LocationM
     }
     public var onEnterRegion: AnyPublisher<CLCircularRegion, Never> {
         onEnterRegionRelay.eraseToAnyPublisher()
+    }
+
+    public var onExitRegion: AnyPublisher<CLCircularRegion, Never> {
+        onExitRegionRelay.eraseToAnyPublisher()
     }
 
     public static let shared: LocationManagerImpl = .init()
@@ -110,5 +116,12 @@ extension LocationManagerImpl {
             return
         }
         onEnterRegionRelay.send(region)
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        guard let region = region as? CLCircularRegion else {
+            return
+        }
+        onExitRegionRelay.send(region)
     }
 }

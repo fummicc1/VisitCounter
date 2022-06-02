@@ -8,6 +8,7 @@ public protocol PlaceManager {
     var places: [Place] { get }
 
     func getVisits(place: MonitorPlace) -> [VisitSnapshot]
+    func getVisits(place: Place) -> [VisitSnapshot]
 }
 
 public class PlaceManagerImpl: NSObject {
@@ -48,6 +49,18 @@ extension PlaceManagerImpl: PlaceManager {
     public func getVisits(place: MonitorPlace) -> [VisitSnapshot] {
         let request = VisitSnapshot.fetchRequest()
         request.predicate = NSPredicate(format: "monitorPlace = %@", place)
+        do {
+            let visits = try persistenceController.container.viewContext.fetch(request)
+            return visits
+        } catch {
+            print(error)
+        }
+        return []
+    }
+
+    public func getVisits(place: Place) -> [VisitSnapshot] {
+        let request = VisitSnapshot.fetchRequest()
+        request.predicate = NSPredicate(format: "monitorPlace.id = %@", place.id)
         do {
             let visits = try persistenceController.container.viewContext.fetch(request)
             return visits

@@ -28,12 +28,8 @@ public struct PersistenceController {
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         } else {
-            var groupID: String = "group.fummicc1.vilog"
-            var appName = "ViLog"
-    #if DEBUG
-            groupID += "-debug"
-            appName = "D_ViLog"
-    #endif
+            let groupID: String = Const.groupID
+            let appName = Const.appName
 
             let containerURL = FileManager.default.containerURL(
                 forSecurityApplicationGroupIdentifier: groupID

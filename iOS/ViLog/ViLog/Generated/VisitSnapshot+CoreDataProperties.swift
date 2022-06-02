@@ -2,7 +2,7 @@
 //  VisitSnapshot+CoreDataProperties.swift
 //  ViLog
 //
-//  Created by Fumiya Tanaka on 2022/05/22.
+//  Created by Fumiya Tanaka on 2022/06/02.
 //
 //
 
@@ -17,6 +17,7 @@ extension VisitSnapshot {
     }
 
     @NSManaged public var visitedAt: Date?
+    @NSManaged public var exitedAt: Date?
     @NSManaged public var monitorPlace: MonitorPlace?
 
 }

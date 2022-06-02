@@ -7,11 +7,12 @@
         <attribute name="name" attributeType="String" defaultValueString=""/>
     </entity>
     <entity name="VisitSnapshot" representedClassName="VisitSnapshot" syncable="YES">
+        <attribute name="exitedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="visitedAt" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="monitorPlace" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MonitorPlace"/>
     </entity>
     <elements>
         <element name="MonitorPlace" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="VisitSnapshot" positionX="-54" positionY="18" width="128" height="59"/>
+        <element name="VisitSnapshot" positionX="-54" positionY="18" width="128" height="74"/>
     </elements>
 </model>
