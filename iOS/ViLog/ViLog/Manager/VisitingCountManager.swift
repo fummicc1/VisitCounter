@@ -28,7 +28,7 @@ class VisitingCountManagerImpl {
             let coordinate = region.center
             let request = VisitSnapshot.fetchRequest()
             request.predicate = NSPredicate(
-                format: "exitedAt == nil AND monitorPlace.latitude = %@ AND monitorPlace.longitude = %@",
+                format: "exitedAt = nil AND monitorPlace.latitude = %@ AND monitorPlace.longitude = %@",
                 coordinate.latitude, coordinate.longitude
             )
             let context = persistenceController.container.viewContext

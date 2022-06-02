@@ -17,13 +17,8 @@ class Storage {
     lazy var persistentContainer: NSPersistentContainer = {
         let container: NSPersistentContainer
 
-        var groupID: String = "group.fummicc1.vilog"
-        var appName = "ViLog"
-#if DEBUG
-        groupID += "-debug"
-        appName = "D_ViLog"
-#endif
-
+        var groupID: String = Const.groupID
+        var appName = Const.appName
 
         let containerURL = FileManager.default.containerURL(
             forSecurityApplicationGroupIdentifier: groupID
@@ -67,7 +62,9 @@ class Storage {
     }
 
     func fetchAllMonitoringPlaces() -> [MonitorPlace] {
-        guard let response = try? persistentContainer.viewContext.fetch(.init(entityName: "MonitorPlace")) as? [MonitorPlace] else {
+        guard let response = try? persistentContainer.viewContext.fetch(
+            MonitorPlace.fetchRequest()
+        ) else {
             return []
         }
         return response

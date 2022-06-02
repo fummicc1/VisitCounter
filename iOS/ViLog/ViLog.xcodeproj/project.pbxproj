@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D34240E0283B2DCE0040695C /* ViLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A397283A5C1D006F3CE6 /* ViLog.xcdatamodeld */; };
+		D35108822849092200A6E987 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB55FF2848EEE700137407 /* Const.swift */; };
 		D3A9A38D283A5C1B006F3CE6 /* ViLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A9A38C283A5C1B006F3CE6 /* ViLogApp.swift */; };
 		D3A9A391283A5C1D006F3CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A9A390283A5C1D006F3CE6 /* Assets.xcassets */; };
 		D3A9A394283A5C1D006F3CE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A9A393283A5C1D006F3CE6 /* Preview Assets.xcassets */; };
@@ -184,6 +185,7 @@
 				D3A9A3F7283A8A83006F3CE6 /* ViLog.entitlements */,
 				D3A9A3F6283A8A6A006F3CE6 /* ViLogDebug.entitlements */,
 				D3A9A3ED283A7FB3006F3CE6 /* Info.plist */,
+				D3DB55FF2848EEE700137407 /* Const.swift */,
 				D3A9A395283A5C1D006F3CE6 /* Persistence.swift */,
 				D3A9A3D2283A6A60006F3CE6 /* RootView.swift */,
 				D3A9A38C283A5C1B006F3CE6 /* ViLogApp.swift */,
@@ -195,7 +197,6 @@
 				D3A9A3E9283A7BB9006F3CE6 /* UI */,
 				D3A9A3CE283A6A5F006F3CE6 /* Utils */,
 				D3A9A397283A5C1D006F3CE6 /* ViLog.xcdatamodeld */,
-				D3DB55FF2848EEE700137407 /* Const.swift */,
 			);
 			path = ViLog;
 			sourceTree = "<group>";
@@ -509,6 +510,7 @@
 				D3A9A405283AAD67006F3CE6 /* VisitSnapshot+CoreDataClass.swift in Sources */,
 				D3A9A403283AAD67006F3CE6 /* MonitorPlace+CoreDataProperties.swift in Sources */,
 				D3A9A3C2283A65BE006F3CE6 /* ShareViewController.swift in Sources */,
+				D35108822849092200A6E987 /* Const.swift in Sources */,
 				D34240E0283B2DCE0040695C /* ViLog.xcdatamodeld in Sources */,
 				D3A9A401283AA91E006F3CE6 /* Storage.swift in Sources */,
 			);
@@ -667,7 +669,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ViLog/ViLogDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"ViLog/Preview Content\"";
 				DEVELOPMENT_TEAM = S8WBNKMKYU;
 				ENABLE_PREVIEWS = YES;
@@ -700,7 +702,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ViLog/ViLog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"ViLog/Preview Content\"";
 				DEVELOPMENT_TEAM = S8WBNKMKYU;
 				ENABLE_PREVIEWS = YES;

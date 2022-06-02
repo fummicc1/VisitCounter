@@ -19,8 +19,8 @@ public class PlaceManagerImpl: NSObject {
     public init(persistenceController: PersistenceController) {
         self.persistenceController = persistenceController
         super.init()
-        guard let places = try? persistenceController.container.viewContext.fetch(NSFetchRequest<MonitorPlace>(
-            entityName: "MonitorPlace")
+        guard let places = try? persistenceController.container.viewContext.fetch(
+            MonitorPlace.fetchRequest()
         ) else {
             return
         }
