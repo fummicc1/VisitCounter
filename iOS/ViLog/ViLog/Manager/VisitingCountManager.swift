@@ -28,7 +28,7 @@ class VisitingCountManagerImpl {
             let coordinate = region.center
             let request = VisitSnapshot.fetchRequest()
             request.predicate = NSPredicate(
-                format: "exitedAt = nil AND monitorPlace.latitude = %@ AND monitorPlace.longitude = %@",
+                format: "exitedAt = nil AND monitorPlace.latitude = %f AND monitorPlace.longitude = %f",
                 coordinate.latitude, coordinate.longitude
             )
             let context = persistenceController.container.viewContext
@@ -40,7 +40,7 @@ class VisitingCountManagerImpl {
                 let new = VisitSnapshot(context: context)
                 let placeRequest = MonitorPlace.fetchRequest()
                 placeRequest.predicate = NSPredicate(
-                    format: "latitude = %@ AND longitude = %@",
+                    format: "latitude = %f AND longitude = %f",
                     coordinate.latitude,
                     coordinate.longitude
                 )
@@ -62,7 +62,7 @@ class VisitingCountManagerImpl {
             let coordinate = region.center
             let request = VisitSnapshot.fetchRequest()
             request.predicate = NSPredicate(
-                format: "exitedAt == nil AND monitorPlace.latitude = %@ AND monitorPlace.longitude = %@",
+                format: "exitedAt = nil AND monitorPlace.latitude = %f AND monitorPlace.longitude = %f",
                 coordinate.latitude, coordinate.longitude
             )
             let context = persistenceController.container.viewContext
